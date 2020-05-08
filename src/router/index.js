@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Home, Order } from "../pages";
+import { Home, Order, Login } from "../pages";
 import { Dashboard } from "../components/general";
 import styled from "styled-components";
 
@@ -8,8 +8,10 @@ const Router = () => (
   <StyledApp>
     <BrowserRouter>
       <Switch>
+        <Route path="/login" component={Login} />
         <Dashboard>
           <Route path="/" exact={true} component={Home} />
+
           <Route path="/order" component={Order} />
         </Dashboard>
       </Switch>
