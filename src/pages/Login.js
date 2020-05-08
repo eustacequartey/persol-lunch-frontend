@@ -5,20 +5,36 @@ const Login = () => {
   return (
     <div class="login">
       <div class="left">
-        <h1>PERSOL LUNCH</h1>
-        <img class="loginimg" src={food} alt="" />
+        <div>
+          <div>
+            <h1 class="logo">PERSOL LUNCH</h1>
+          </div>
+          <p class="info">
+            Tag line
+            <br /> goes here!
+          </p>
+        </div>
       </div>
 
       <div class="right">
         <form class="form">
-          <img class="prof" src={prof} alt="" />
           <div class="heading">Login</div>
           <div>
-            <p>Username</p>
-            <input class="input" type="text" name="name" />
+            <p class="label">USERNAME</p>
+            <input class="input" type="text" name="username" />
           </div>
-          <p>Password</p>
-          <input class="input" type="text" name="name" />
+          <p class="label">PASSWORD</p>
+          <input class="input" type="password" name="password" />
+          <br />
+          <input
+            type="checkbox"
+            id="savepassword"
+            name="savepassword"
+            value="yes"
+          />
+          <label class="checkbox-label" for="savepassword">
+            Remember me?
+          </label>
           <div>
             <input class="submit" type="submit" value="Submit" />
           </div>
