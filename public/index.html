@@ -32,6 +32,34 @@
     <title>React App</title>
   </head>
   <body>
+    <script>
+
+      function showNotification() {
+        const notification = new Notification('New message from Persol Lunch', {
+          body: 'You are reminded to place an order for your lunch',
+          icon: '/p.png'
+        })
+
+        notification.onclick = (e) => {
+          window.location.href = 'http://localhost:3000/order'
+        }
+
+      }
+
+      console.log(Notification.permission);
+      if (Notification.permission === 'granted') {
+        showNotification()
+      }
+      else {
+        Notification.requestPermission().then(permission => {
+          if (permission === 'granted') {
+            showNotification()
+          }
+
+        })
+      }
+
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
