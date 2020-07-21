@@ -47,9 +47,17 @@ const Dashboard = (props) => {
       <Sidebar>
         <div className="top">
           <div className="widget">
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <StyledImage src={avatar} />
-              <p style={{ padding: "0 .5rem" }}>Hello, User</p>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}>
+              <div>
+                <StyledImage src={avatar} />
+              </div>
+              <div>
+                <p style={{ padding: "0 .5rem" }}>Hello, User</p>
+              </div>
             </div>
 
             <div style={{ display: "flex" }}>
@@ -84,12 +92,13 @@ const StyledDashboard = styled.div`
 `;
 
 const Toolbar = styled.div`
-  flex-basis: 6%;
+  flex-basis: 4%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 0;
   justify-content: space-between;
+  max-height: 100vh;
 
   .subgroup {
     margin: 3rem 0 0 0;
@@ -104,9 +113,15 @@ const Toolbar = styled.div`
 `;
 
 const Content = styled.div`
+  display: flex;
+  // flex-direction: column;
+  min-height: 100vh;
   flex-grow: 1;
   background-color: #f4f6fa;
   padding: 2rem 2rem 0 2rem;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 const Sidebar = styled.div`
@@ -114,6 +129,7 @@ const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
+  max-height: 100vh;
 
   .top {
     background-color: #262444;
@@ -143,8 +159,8 @@ const Sidebar = styled.div`
 `;
 
 const StyledImage = styled.img`
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin: 1rem 0;
 `;
 
