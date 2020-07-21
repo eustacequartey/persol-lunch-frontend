@@ -10,6 +10,7 @@ import settings from "../../assets/images/settings.png";
 import avatar from "../../assets/images/avatar.png";
 import heart from "../../assets/images/heart.png";
 import bell from "../../assets/images/bell.png";
+import users from "../../assets/images/users.png";
 import { NavLink } from "react-router-dom";
 import OrderFlow from "./OrderFlow";
 import Summary from "./Summary";
@@ -27,6 +28,9 @@ const Dashboard = (props) => {
               <StyledImage src={order} />
             </NavLink>
             <StyledImage src={charts} />
+            <NavLink to="/users" exact={true}>
+              <StyledImage src={users} />
+            </NavLink>
             <StyledImage src={cash} />
             <StyledImage src={signs} />
           </div>

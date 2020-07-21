@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Home, Order, Login } from "../pages";
+import { Home, Order, Login, Users } from "../pages";
 import { Dashboard } from "../components/general";
 import styled from "styled-components";
 
@@ -11,6 +11,7 @@ const Router = () => (
         <Route path="/login" component={Login} />
         <Dashboard>
           <Route path="/" exact={true} component={Home} />
+          <Route path="/users" exact={true} component={Users} />
 
           <Route path="/order" component={Order} />
         </Dashboard>
